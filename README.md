@@ -1,3 +1,12 @@
+<p>
+  <a href="https://github.com/tidybytetools">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tidybytetools/pdf-table-pull-lite/main/assets/tidybytetools-lockup-dark.png">
+      <img alt="Tidy Byte Tools" src="https://raw.githubusercontent.com/tidybytetools/pdf-table-pull-lite/main/assets/tidybytetools-lockup-light.png" height="44">
+    </picture>
+  </a>
+</p>
+
 # pdf-table-pull-lite
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/tidybytetools/pdf-table-pull-lite/blob/main/LICENSE)
