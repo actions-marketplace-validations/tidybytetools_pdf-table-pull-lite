@@ -112,6 +112,8 @@ Run it by hand to check it starts (it waits quietly for an app to talk to it):
 uvx --from pdf-table-pull-lite pdf-table-pull-lite-mcp
 ```
 
+Shorter way to start the same server: `uvx pdf-table-pull-lite mcp`.
+
 Pick your app below and copy the block. Restart the app after you save.
 
 ### Claude Desktop

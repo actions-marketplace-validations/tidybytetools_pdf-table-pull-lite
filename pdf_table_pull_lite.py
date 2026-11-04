@@ -11,7 +11,7 @@ Usage:
 """
 import argparse, csv, os, re, sys
 
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 PRO_URL = "https://tidybyte.gumroad.com/l/hkxqxh"
 PRO_LINE = f"Need Excel output, scanned PDFs or tables joined across pages? pdf-table-pull (paid): {PRO_URL}"
 
@@ -93,7 +93,20 @@ def write_csv(tables, out_dir):
     return paths
 
 
+def run_mcp():
+    """Start the stdio MCP server (needs the mcp package, which pip installs for you)."""
+    try:
+        import pdf_table_pull_lite_mcp
+    except ImportError as e:
+        print(f"error: the MCP server needs the mcp package ({e}). Run: pip install pdf-table-pull-lite", file=sys.stderr)
+        return 1
+    pdf_table_pull_lite_mcp.main()
+    return 0
+
 def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    if argv == ["mcp"]:
+        return run_mcp()
     ap = argparse.ArgumentParser(prog="pdf-table-pull-lite",
                                  description="Pull tables out of a text PDF into CSV files (one file per table).",
                                  epilog=PRO_LINE)
