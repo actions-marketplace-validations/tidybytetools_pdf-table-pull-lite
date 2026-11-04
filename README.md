@@ -213,6 +213,54 @@ gemini extensions install https://github.com/tidybytetools/pdf-table-pull-lite
 
 Tool: `extract_pdf_tables(path, pages="", strategy="auto", output_dir="")`. It returns a list with the CSV text of each table. If you set `output_dir`, it saves the CSVs there and returns the file paths instead.
 
+## Use it in GitHub Actions
+
+Pull the tables out of PDFs in your repo, or out of a PDF report your workflow downloads, every time it runs. You get one CSV per table and a preview on the run page.
+
+```yaml
+name: PDF tables
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  tables:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: tidybytetools/pdf-table-pull-lite@v1
+        with:
+          files: reports/**/*.pdf
+          artifact-name: pdf-tables   # download the CSVs from the run page
+```
+
+Each PDF gets its own folder of CSVs inside `pdf-tables/`, named after the PDF's path. For example `reports/june.pdf` gives `pdf-tables/reports/june/page1_table1.csv`.
+
+It runs the code in the same tag you pick, with a fixed pdfplumber version. No API key, no account, and your PDFs are not sent anywhere outside GitHub. It works on Linux, Windows and Mac runners. Scanned pages (just a picture, no text) are skipped with a warning.
+
+### Inputs
+
+| Input | Default | What it does |
+|---|---|---|
+| `files` | `**/*.pdf` | Which PDFs to read. Glob patterns, one per line or split by commas. |
+| `exclude` | `node_modules/**`, `**/node_modules/**`, `vendor/**` | Patterns to skip. |
+| `output-dir` | `pdf-tables` | Folder for the CSV files. |
+| `pages` | (empty) | Pages to read in every PDF, like `1,3-5`. Empty reads all pages. |
+| `strategy` | `auto` | `lines` (tables with borders), `text` (lined up by spaces), or `auto` (lines, then text). |
+| `fail-if-no-tables` | `false` | Fail when a PDF has no tables. |
+| `fail-on-scanned` | `false` | Fail when a PDF has scanned pages with no text. |
+| `fail-if-no-files` | `true` | Fail when no files match. |
+| `artifact-name` | (empty) | If set, upload the CSVs as an artifact with this name. |
+| `python-version` | (empty) | Python to set up. Empty uses the runner's Python (3.10 or newer). |
+
+### Outputs
+
+| Output | What it is |
+|---|---|
+| `files` | How many PDFs were read. |
+| `tables` | How many tables were saved as CSV. |
+| `scanned-files` | How many PDFs have scanned pages. |
+| `output-dir` | The folder with the CSV files. |
+
 ## For AI agents
 
 - **Use when:** you have a local PDF with real text (you can select the words) and need its tables as rows.

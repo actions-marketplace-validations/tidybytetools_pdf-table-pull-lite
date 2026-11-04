@@ -2,6 +2,13 @@
 
 What changed in pdf-table-pull-lite, newest first.
 
+## 1.3.0 - 2026-11-04
+
+- New: a GitHub Action (`action.yml`). Add `uses: tidybytetools/pdf-table-pull-lite@v1` to a workflow to pull the tables out of PDFs into CSV files.
+- The action can read many PDFs at once, upload the CSVs as an artifact, and show a preview of the first tables on the run page.
+- It warns about scanned pages. Set `fail-on-scanned` or `fail-if-no-tables` to `"true"` to fail the step instead.
+- The command-line tool and MCP server did not change.
+
 ## 1.2.1 - 2026-11-04
 
 - Fix: installing from the MCP Registry now starts the MCP server. Before, it started the plain command-line tool by mistake.

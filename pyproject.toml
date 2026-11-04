@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pdf-table-pull-lite"
-version = "1.2.1"
+version = "1.3.0"
 description = "Pull the tables out of a text PDF into CSV files. Runs locally. CLI and MCP server."
 readme = "README.md"
 license = "MIT"

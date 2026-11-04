@@ -11,7 +11,7 @@ Usage:
 """
 import argparse, csv, os, re, sys
 
-__version__ = "1.2.1"
+__version__ = "1.3.0"
 PRO_URL = "https://tidybyte.gumroad.com/l/hkxqxh"
 PRO_LINE = f"Need Excel output, scanned PDFs or tables joined across pages? pdf-table-pull (paid): {PRO_URL}"
 
