@@ -15,6 +15,7 @@
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-green.svg)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tidybytetools/pdf-table-pull-lite)
 [![PyPI downloads](https://img.shields.io/pypi/dm/pdf-table-pull-lite.svg)](https://pypistats.org/packages/pdf-table-pull-lite)
 [![Glama score](https://glama.ai/mcp/servers/tidybytetools/pdf-table-pull-lite/badges/score.svg)](https://glama.ai/mcp/servers/tidybytetools/pdf-table-pull-lite)
+[![Action test](https://github.com/tidybytetools/pdf-table-pull-lite/actions/workflows/action-test.yml/badge.svg)](https://github.com/tidybytetools/pdf-table-pull-lite/actions/workflows/action-test.yml)
 
 **Free. No API key. Runs on your own computer, so your PDFs stay with you.**
 
