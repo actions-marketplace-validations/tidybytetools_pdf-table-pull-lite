@@ -2,6 +2,13 @@
 
 What changed in pdf-table-pull-lite, newest first.
 
+## 1.2.0 - 2026-11-04
+
+- MCP tool now has safety labels (tool annotations) so AI apps know what it does:
+  readOnlyHint false, destructiveHint true, idempotentHint true, openWorldHint false.
+- The tool description now says when to use it and when not to.
+- Needs mcp 1.10 or newer.
+
 ## 1.1.0 - 2026-11-04
 
 - New: a free MCP server, `pdf-table-pull-lite-mcp`. It gives AI apps one tool, `extract_pdf_tables`.
