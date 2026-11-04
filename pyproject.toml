@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pdf-table-pull-lite"
-version = "1.0.0"
+version = "1.1.0"
 description = "Pull the tables out of a text PDF into CSV files. Runs locally."
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "tidybyte"}]
-requires-python = ">=3.8"
-dependencies = ["pdfplumber>=0.10"]
-keywords = ["pdf", "table", "csv", "extract", "pdfplumber", "cli"]
+requires-python = ">=3.10"
+dependencies = ["pdfplumber>=0.10", "mcp>=1.2,<2"]
+keywords = ["pdf", "table", "csv", "extract", "pdfplumber", "cli", "mcp", "mcp-server"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
@@ -22,10 +22,12 @@ classifiers = [
 
 [project.urls]
 "Paid version" = "https://tidybyte.gumroad.com/l/hkxqxh"
+Source = "https://github.com/tidybytetools/pdf-table-pull-lite"
 Shop = "https://tidybyte.gumroad.com"
 
 [project.scripts]
 pdf-table-pull-lite = "pdf_table_pull_lite:main"
+pdf-table-pull-lite-mcp = "pdf_table_pull_lite_mcp:main"
 
 [tool.setuptools]
-py-modules = ["pdf_table_pull_lite"]
+py-modules = ["pdf_table_pull_lite", "pdf_table_pull_lite_mcp"]
