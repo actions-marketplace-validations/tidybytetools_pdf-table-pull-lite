@@ -1,0 +1,15 @@
+{
+  "name": "pdf-table-pull-lite",
+  "version": "1.2.0",
+  "description": "Pull tables out of local text PDFs as CSV. Runs on your computer, nothing uploaded.",
+  "mcpServers": {
+    "pdf-table-pull-lite": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "pdf-table-pull-lite",
+        "pdf-table-pull-lite-mcp"
+      ]
+    }
+  }
+}
