@@ -1,6 +1,6 @@
 # pdf-table-pull-lite
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/tidybytetools/pdf-table-pull-lite/blob/main/LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![MCP server](https://img.shields.io/badge/MCP-stdio-purple.svg)](#use-it-from-claude-desktop-or-cursor-mcp)
 
@@ -9,7 +9,21 @@ Need Excel output, scanned PDFs or tables joined across pages? The paid version 
 
 Runs on your own computer, so your PDFs are never uploaded anywhere. MIT license. Python 3.10 or newer, on Windows, Mac and Linux.
 
+<!-- mcp-name: io.github.tidybytetools/pdf-table-pull-lite -->
+
 ## Install
+
+```
+pip install pdf-table-pull-lite
+```
+
+Or use pipx, which keeps it in its own space:
+
+```
+pipx install pdf-table-pull-lite
+```
+
+Want the newest code from GitHub instead?
 
 ```
 pip install git+https://github.com/tidybytetools/pdf-table-pull-lite
@@ -81,7 +95,7 @@ There is a small free MCP server built in. It gives your AI app one tool, `extra
 Run it by hand to check it starts (it waits quietly for an app to talk to it):
 
 ```
-uvx --from git+https://github.com/tidybytetools/pdf-table-pull-lite pdf-table-pull-lite-mcp
+uvx --from pdf-table-pull-lite pdf-table-pull-lite-mcp
 ```
 
 Claude Desktop (`claude_desktop_config.json`) or Cursor (`~/.cursor/mcp.json`):
@@ -91,7 +105,7 @@ Claude Desktop (`claude_desktop_config.json`) or Cursor (`~/.cursor/mcp.json`):
   "mcpServers": {
     "pdf-table-pull-lite": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/tidybytetools/pdf-table-pull-lite", "pdf-table-pull-lite-mcp"]
+      "args": ["--from", "pdf-table-pull-lite", "pdf-table-pull-lite-mcp"]
     }
   }
 }
@@ -105,7 +119,7 @@ Tool: `extract_pdf_tables(path, pages="", strategy="auto", output_dir="")`. It r
 - **Don't use when:** the PDF is a scan or photo, it has a password, or you need Excel. Those pages get skipped. Use the paid version for those.
 - **Input:** a file path, plus optional `pages` like `1,3-5` and `strategy` (`auto`, `lines`, `text`).
 - **Output:** a list of CSV strings, one per table, first row is the header. Empty list means no tables were found.
-- CLI exit code is 0 on success and 1 on error (message on stderr). See also [`llms.txt`](llms.txt).
+- CLI exit code is 0 on success and 1 on error (message on stderr). See also [`llms.txt`](https://github.com/tidybytetools/pdf-table-pull-lite/blob/main/llms.txt).
 
 ## Tests
 
