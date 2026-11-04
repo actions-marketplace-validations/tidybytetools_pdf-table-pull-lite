@@ -201,6 +201,14 @@ command = "uvx"
 args = ["--from", "pdf-table-pull-lite", "pdf-table-pull-lite-mcp"]
 ```
 
+### Gemini CLI
+
+This repo is also a Gemini CLI extension. Install it with:
+
+```
+gemini extensions install https://github.com/tidybytetools/pdf-table-pull-lite
+```
+
 Tool: `extract_pdf_tables(path, pages="", strategy="auto", output_dir="")`. It returns a list with the CSV text of each table. If you set `output_dir`, it saves the CSVs there and returns the file paths instead.
 
 ## For AI agents
