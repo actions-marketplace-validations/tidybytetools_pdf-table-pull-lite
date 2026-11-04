@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-table-pull-lite"
+version = "1.0.0"
+description = "Pull the tables out of a text PDF into CSV files. Runs locally."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "tidybyte"}]
+requires-python = ">=3.8"
+dependencies = ["pdfplumber>=0.10"]
+keywords = ["pdf", "table", "csv", "extract", "pdfplumber", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Office/Business",
+]
+
+[project.urls]
+"Paid version" = "https://tidybyte.gumroad.com/l/hkxqxh"
+Shop = "https://tidybyte.gumroad.com"
+
+[project.scripts]
+pdf-table-pull-lite = "pdf_table_pull_lite:main"
+
+[tool.setuptools]
+py-modules = ["pdf_table_pull_lite"]
