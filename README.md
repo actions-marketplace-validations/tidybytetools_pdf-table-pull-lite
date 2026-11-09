@@ -24,6 +24,12 @@ Need Excel output, scanned PDFs or tables joined across pages? The paid version 
 
 Runs on your own computer, so your PDFs are never uploaded anywhere. MIT license. Python 3.10 or newer, on Windows, Mac and Linux.
 
+## Links
+
+- **[Website](https://tidybytetools.github.io/tools/pdf-table-pull/)** — product page with prices and options
+- **[Apify (no-install cloud version)](https://apify.com/tidybytetools/pdf-table-pull)** — pay only for what you use
+- **[Pro version on Gumroad](https://tidybyte.gumroad.com/l/hkxqxh)** — Excel output, scanned PDFs, tables joined across pages
+
 <!-- mcp-name: io.github.tidybytetools/pdf-table-pull-lite -->
 
 ## Install
@@ -277,6 +283,19 @@ pip install pdfplumber "mcp<2"
 python3 -m unittest discover tests
 ```
 
+## FAQ
+
+**What PDFs work?**
+Text PDFs where you can select the words. Scanned (picture-only) pages are skipped.
+
+**Do my PDFs leave my computer?**
+No. The tool runs on your computer. Nothing is uploaded.
+
+**How is this different from the Pro version?**
+Pro adds Excel and JSON output, OCR for scans, and tables joined across pages.
+
+**Does it work with AI apps?**
+Yes. It includes a free MCP server. No API key.
 ## License
 
 MIT. See `LICENSE`.

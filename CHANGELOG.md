@@ -2,6 +2,11 @@
 
 What changed in pdf-table-pull-lite, newest first.
 
+## 1.3.1 - 2026-11-09
+
+- Point Homepage, Documentation, and the MCP Registry websiteUrl at the official product page on [tidybytetools.github.io](https://tidybytetools.github.io/tools/pdf-table-pull/).
+- README: add a clear Links section (Website, Apify cloud version where it exists, Pro on Gumroad) and a short FAQ.
+
 ## 1.3.0 - 2026-11-09
 
 - Fix: if the CSV files were saved under a hidden folder like `.github/`, the artifact upload said no files were found. The upload now includes those folders.
