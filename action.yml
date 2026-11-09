@@ -121,3 +121,4 @@ runs:
         name: ${{ inputs.artifact-name }}
         path: ${{ steps.pull.outputs.output-dir }}
         if-no-files-found: error
+        include-hidden-files: true

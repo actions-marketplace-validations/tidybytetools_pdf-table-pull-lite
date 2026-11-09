@@ -250,7 +250,7 @@ It runs the code in the same tag you pick, with a fixed pdfplumber version. No A
 | `fail-if-no-tables` | `false` | Fail when a PDF has no tables. |
 | `fail-on-scanned` | `false` | Fail when a PDF has scanned pages with no text. |
 | `fail-if-no-files` | `true` | Fail when no files match. |
-| `artifact-name` | (empty) | If set, upload the CSVs as an artifact with this name. |
+| `artifact-name` | (empty) | If set, upload the CSVs as an artifact with this name. Hidden folders like `.github/` are included. |
 | `python-version` | (empty) | Python to set up. Empty uses the runner's Python (3.10 or newer). |
 
 ### Outputs

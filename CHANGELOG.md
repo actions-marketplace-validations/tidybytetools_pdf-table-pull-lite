@@ -2,8 +2,9 @@
 
 What changed in pdf-table-pull-lite, newest first.
 
-## 1.3.0 - 2026-11-04
+## 1.3.0 - 2026-11-09
 
+- Fix: if the CSV files were saved under a hidden folder like `.github/`, the artifact upload said no files were found. The upload now includes those folders.
 - New: a GitHub Action (`action.yml`). Add `uses: tidybytetools/pdf-table-pull-lite@v1` to a workflow to pull the tables out of PDFs into CSV files.
 - The action can read many PDFs at once, upload the CSVs as an artifact, and show a preview of the first tables on the run page.
 - It warns about scanned pages. Set `fail-on-scanned` or `fail-if-no-tables` to `"true"` to fail the step instead.
