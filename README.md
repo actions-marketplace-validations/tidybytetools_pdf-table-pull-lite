@@ -24,6 +24,8 @@ Need Excel output, scanned PDFs or tables joined across pages? The paid version 
 
 Runs on your own computer, so your PDFs are never uploaded anywhere. MIT license. Python 3.10 or newer, on Windows, Mac and Linux.
 
+Also searched as: ES: extraer tablas de PDF, PDF a CSV / PT: extrair tabelas de PDF / DE: PDF-Tabellen extrahieren / FR: extraire des tableaux PDF / JA: PDFテーブル抽出、PDFをCSVに
+
 ## Links
 
 - **[Website](https://tidybytetools.github.io/tools/pdf-table-pull/)** — product page with prices and options
@@ -31,6 +33,10 @@ Runs on your own computer, so your PDFs are never uploaded anywhere. MIT license
 - **[Pro version on Gumroad](https://tidybyte.gumroad.com/l/hkxqxh)** — Excel output, scanned PDFs, tables joined across pages
 
 <!-- mcp-name: io.github.tidybytetools/pdf-table-pull-lite -->
+
+## Before and after
+
+Before: a text PDF (you can highlight the words) with a table. After: one CSV file per table. Scanned, image-only pages are skipped and listed. This free tool does not write Excel and does not do OCR.
 
 ## Install
 
